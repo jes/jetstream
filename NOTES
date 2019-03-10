@@ -1,0 +1,37 @@
+docs at https://janus.conf.meetecho.com/docs/videoroom.html
+
+Remember to check whether randomers can delete our streams by pretending to be an admin!
+
+videoroom api:
+  create
+  destroy
+  edit
+  exists
+  list
+  allowed
+  kick
+  listparticipants - use this to know how many viewers there are
+  join
+  joinandconfigure
+  configure
+  publish
+  unpublish
+  start
+  pause
+  switch
+  leave
+
+just one html page; if there's a uri-fragment, decode it and start up as a viewer, otherwise start up as a streamer
+
+publisher:
+ - create(permanent=false, secret=randomstring, is_private=true)
+   we get the room id back in the "room" field
+   set the room secret so that randomers can't edit the room
+ - join(ptype=publisher, room=myroom)
+   no display name required
+ - publish(audio=true, video=true, ???)
+   copy this from videoroomtest
+
+viewer:
+ - join(ptype=subscriber, room=myroom, feed=???, audio=true, video=true)
+   feed needs to be "unique id of the publisher to subscribe to", should come from uri fragment
