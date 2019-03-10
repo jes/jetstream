@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>jetstream.</title>
+</head>
+<body>
+<h1>jetstream.</h1>
+
+<div id="publisher" style="display:none">
+Pub<br>
+<button id="start">Start</button>
+<span id="streamurl"></span>
+<video id="myvideo" autoplay playsinline muted="muted"></div>
+</div>
+
+<div id="subscriber" style="display:none">
+Sub
+<video id="remotestream" autoplay playsinline></div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/adapter.min.js"></script>
+<script type="text/javascript" src="js/janus.js"></script>
+<script type="text/javascript" src="js/jetstream.js"></script>
+</body>
+</html>

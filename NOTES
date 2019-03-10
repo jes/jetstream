@@ -10,7 +10,7 @@ videoroom api:
   list
   allowed
   kick
-  listparticipants - use this to know how many viewers there are
+  listparticipants
   join
   joinandconfigure
   configure
@@ -34,4 +34,4 @@ publisher:
 
 viewer:
  - join(ptype=subscriber, room=myroom, feed=???, audio=true, video=true)
-   feed needs to be "unique id of the publisher to subscribe to", should come from uri fragment
+   feed needs to be "unique id of the publisher to subscribe to", should come from listparticipants?
