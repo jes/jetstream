@@ -175,6 +175,13 @@ function publisher_handle_msg(msg) {
     if (msg["videoroom"] == "joined") {
         publishOwnFeed();
     }
+
+    if (msg["videoroom"] == "slow_link") {
+        $('#slowlink').css('opacity', '1.0');
+        $('#slowlink').animate({
+            opacity: 0,
+        }, 1000);
+    }
 }
 
 function publisher_handle_jsep(jsep) {
