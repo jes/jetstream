@@ -33,10 +33,12 @@ $(document).ready(function() {
 
 function init_subscriber(joinroom) {
     $('#subscriber').show();
+    $('#substatus').text("Connecting...");
 
     janus = new Janus({
         server: server,
         success: function() {
+            $('#substatus').text("Joining stream...");
             start_subscribing(joinroom);
         },
         error: function(error) {
@@ -76,7 +78,6 @@ function start_subscribing(joinroom) {
         plugin: "janus.plugin.videoroom",
         success: function(pluginHandle) {
             remoteFeed = pluginHandle;
-            console.log("JOIN " + joinroom);
             remoteFeed.send({
                 message: {request:"listparticipants","room":joinroom},
                 success: function(msg) {
@@ -124,7 +125,10 @@ function start_publishing() {
                 message: {"request":"create","permanent":false,"secret":Janus.randomString(12),"is_private":true,"bitrate":128000},
                 success: function(msg) {
                     myroom = msg["room"];
-                    $('#streamurl').text(window.location.origin + window.location.pathname + '#' + myroom);
+                    let url = window.location.origin + window.location.pathname + '#' + myroom;
+                    $('#streamurl').text(url);
+                    $('#streamurl').attr('href', url);
+                    $('#streamurl').show();
                     sfutest.send({
                         message: {"request":"join","room":myroom,"ptype":"publisher"},
                     });
@@ -228,6 +232,6 @@ function subscriber_handle_jsep(jsep) {
 }
 
 function subscriber_handle_remotestream(stream) {
-    console.log("Attaching media stream!!");
+    $('#substatus').text('');
     Janus.attachMediaStream($('#remotestream').get(0), stream);
 }
