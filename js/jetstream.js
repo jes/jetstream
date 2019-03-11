@@ -55,7 +55,7 @@ function init_publisher() {
     $('#publisher').show();
 
     $('#start').one('click', function() {
-        $(this).attr('disabled', true).unbind('click');
+        $('#start').hide();
 
         janus = new Janus({
             server: server,
