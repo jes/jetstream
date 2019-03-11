@@ -3,9 +3,9 @@
  - nicer title/logo
  - bit of explanatory text
  - better feedback/recovery about errors:
-    - tell the publisher when they're getting "slowlink" warnings - automatically drop bit rate?
     - tell the subscriber when the publisher has left
     - if the publisher has to refresh the page, bring them back to the same room?
+    - test restarting the server and make sure the publisher and subscribers automatically recover the stream
  - tell the subscribers and publisher how many viewers there are
  - let the publisher pause and resume video and audio streaming
  - installation instructions
@@ -13,3 +13,5 @@
  - can "lag" stack up over time or does it self-correct?
  - why does the player window sometimes resize itself? should we just bang it to the full browser size?
  - give the publisher an accurate view of their own stream at the current bit rate
+ - let subscribers mute the audio, and maybe change volume if convenient
+ - how long should "slow link" appear for?
