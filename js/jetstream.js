@@ -219,6 +219,15 @@ function subscriber_handle_msg(msg) {
     // TODO: this
     console.log("msg:");
     console.log(msg);
+
+    if (msg["videoroom"] == "event") {
+        if (msg["error_code"] == 428) { // no such feed
+            // publisher isn't here yet, so reload the page
+            window.setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+        }
+    }
 }
 
 function subscriber_handle_jsep(jsep) {
