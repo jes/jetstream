@@ -136,7 +136,7 @@ function start_publishing() {
                     let url = window.location.origin + window.location.pathname + '#' + myroom;
                     $('#streamurl').text(url);
                     $('#streamurl').attr('href', url);
-                    $('#streamurl').show();
+                    $('#show-streamurl').show();
                     sfutest.send({
                         message: {"request":"join","room":myroom,"ptype":"publisher"},
                     });

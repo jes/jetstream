@@ -1,14 +1,15 @@
 <!doctype html>
-<html>
+<html style="background: url(img/prism.png)">
 <head>
 <title>jetstream.</title>
 </head>
 <body>
-<img src="img/jetstream.png" alt="jetstream">
+<div style="max-width: 900px; margin:auto">
+<a href=""><img src="img/jetstream.png" alt="jetstream"></a>
 
 <div id="publisher" style="display:none">
 <button id="start">Start</button>
-<a style="display:none" target="_blank" id="streamurl"></a><br>
+<div id="show-streamurl" style="display:none">Share this stream URL: <a target="_blank" id="streamurl"></a></div><br>
 <span id="slowlink" style="opacity:0;color:red;font-family:monospace">SLOW LINK</span><br>
 <div id="player" style="display:none">
 <video id="myvideo" autoplay playsinline muted="muted"></video><br>
@@ -29,6 +30,10 @@ You could try lowering the bitrate limit.</span>
 <div id="subscriber" style="display:none">
 <span id="substatus">Loading...</span><br>
 <video id="remotestream" autoplay playsinline></video>
+</div>
+
+<hr>
+<i>jetstream is a project by <a href="https://incoherency.co.uk/">James Stanley</a>.</i>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
