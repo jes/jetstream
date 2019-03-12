@@ -4,6 +4,7 @@ let sfutest = null;
 let remoteFeed = null;
 let myroom = null;
 let server = null;
+let slowlinks = 0;
 if(window.location.protocol === 'http:')
 	server = "http://" + window.location.hostname + ":8088/janus";
 else
@@ -186,8 +187,10 @@ function publisher_handle_msg(msg) {
         $('#slowlink').css('opacity', '1.0');
         $('#slowlink').animate({
             opacity: 0,
-        }, 1000);
-        $('#slowlink-explain').show();
+        }, 2000);
+        if (++slowlinks >= 3) {
+            $('#slowlink-explain').show();
+        }
     }
 }
 
