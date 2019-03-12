@@ -8,6 +8,7 @@ Required for "launch":
  - can "lag" stack up over time or does it self-correct?
  - let subscribers mute the audio, and maybe change volume if convenient
  - see if we need to set any of the password settings in Janus in order to avoid trouble
+ - not too unpleasant on mobile, for both publisher and subscriber
 
 Nice to have:
  - better feedback/recovery about errors:
@@ -19,3 +20,4 @@ Nice to have:
  - give the publisher an accurate view of their own stream at the current bit rate
  - how long should "slow link" appear for?
  - let both publishers and subscribers record the stream to a file
+ - shorter room ids, and alphanumeric (what if we just base58 encode the binary of the current id? would be about 1/2 as long, so not much better)
