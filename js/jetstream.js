@@ -71,6 +71,12 @@ function init_publisher() {
             },
         });
     });
+
+    $('#bitrate').change(function() {
+        if (sfutest == null)
+            return;
+        sfutest.send({message:{request:"configure",bitrate:parseInt($(this).val())*1000}});
+    });
 }
 
 function start_subscribing(joinroom) {
@@ -122,7 +128,7 @@ function start_publishing() {
         success: function(pluginHandle) {
             sfutest = pluginHandle;
             sfutest.send({
-                message: {"request":"create","permanent":false,"secret":Janus.randomString(12),"is_private":true,"bitrate":128000},
+                message: {"request":"create","permanent":false,"secret":Janus.randomString(12),"is_private":true},
                 success: function(msg) {
                     myroom = msg["room"];
                     let url = window.location.origin + window.location.pathname + '#' + myroom;
@@ -181,6 +187,7 @@ function publisher_handle_msg(msg) {
         $('#slowlink').animate({
             opacity: 0,
         }, 1000);
+        $('#slowlink-explain').show();
     }
 }
 
@@ -204,6 +211,7 @@ function publishOwnFeed() {
         media: { audioRecv: false, videoRecv: false, audioSend: true, videoSend: true },
         simulcast: false, // TODO: Should this be an option? Or always true?
         success: function(jsep) {
+            $('#player').show();
             sfutest.send({
                 message: {"request":"configure", "audio":true, "video":true},
                 jsep: jsep,

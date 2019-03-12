@@ -10,12 +10,25 @@
 <button id="start">Start</button>
 <a style="display:none" target="_blank" id="streamurl"></a><br>
 <span id="slowlink" style="opacity:0;color:red;font-family:monospace">SLOW LINK</span><br>
-<video id="myvideo" autoplay playsinline muted="muted"></div>
+<div id="player" style="display:none">
+<video id="myvideo" autoplay playsinline muted="muted"></video><br>
+Bitrate limit: <select id="bitrate">
+<option value="0" default>No limit</option>
+<option value="64">64 kbit/sec</option>
+<option value="128">128 kbit/sec</option>
+<option value="256">256 kbit/sec</option>
+<option value="512">512 kbit/sec</option>
+<option value="1024">1 mbit/sec</option>
+<option value="2048">2 mbit/sec</option>
+</select><br>
+<span id="slowlink-explain" style="display:none">If you're getting lots of <span style="color:red;font-family:monospace">SLOW LINK</span> warnings, your stream will be stuttering.
+You could try lowering the bitrate limit.</span>
+</div>
 </div>
 
 <div id="subscriber" style="display:none">
 <span id="substatus">Loading...</span><br>
-<video id="remotestream" autoplay playsinline></div>
+<video id="remotestream" autoplay playsinline></video>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
