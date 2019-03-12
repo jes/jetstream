@@ -73,6 +73,7 @@ function init_publisher() {
         });
     });
 
+    $('#bitrate').val(0);
     $('#bitrate').change(function() {
         if (sfutest == null)
             return;
@@ -212,7 +213,7 @@ function publisher_handle_localstream(stream) {
 function publishOwnFeed() {
     sfutest.createOffer({
         media: { audioRecv: false, videoRecv: false, audioSend: true, videoSend: true },
-        simulcast: false, // TODO: Should this be an option? Or always true?
+        simulcast: false,
         success: function(jsep) {
             $('#player').show();
             sfutest.send({
