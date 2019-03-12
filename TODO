@@ -15,3 +15,5 @@
  - give the publisher an accurate view of their own stream at the current bit rate
  - let subscribers mute the audio, and maybe change volume if convenient
  - how long should "slow link" appear for?
+ - let both publishers and subscribers record the stream to a file
+ - see if we need to set any of the password settings in Janus in order to avoid trouble
