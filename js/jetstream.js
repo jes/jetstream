@@ -56,7 +56,8 @@ function init_publisher() {
     $('#publisher').show();
 
     $('#start').one('click', function() {
-        $('#start').hide();
+        $('#prestart').hide();
+        $('#poststart').show();
 
         janus = new Janus({
             server: server,
