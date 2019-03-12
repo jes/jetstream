@@ -1,6 +1,5 @@
 Required for "launch":
- - nicer title/logo
- - bit of explanatory text
+ - make the page look less amateurish
  - better feedback/recovery about errors:
     - tell the subscriber when the publisher has left
  - installation instructions
