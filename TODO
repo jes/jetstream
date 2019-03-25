@@ -3,7 +3,6 @@ Required for "launch":
  - better feedback/recovery about errors:
     - tell the subscriber when the publisher has left
  - installation instructions
- - deploy on jetstream.club, with ssl certificate
  - can "lag" stack up over time or does it self-correct?
  - let subscribers mute the audio, and maybe change volume if convenient
  - see if we need to set any of the password settings in Janus in order to avoid trouble
