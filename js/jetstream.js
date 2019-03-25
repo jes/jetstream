@@ -135,6 +135,7 @@ function start_publishing() {
                 success: function(msg) {
                     myroom = msg["room"];
                     let url = window.location.origin + window.location.pathname + '#' + myroom;
+                    $('#loading').hide();
                     $('#streamurl').text(url);
                     $('#streamurl').attr('href', url);
                     $('#show-streamurl').show();
