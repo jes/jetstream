@@ -7,6 +7,7 @@ Required for "launch":
  - let subscribers mute the audio, and maybe change volume if convenient
  - see if we need to set any of the password settings in Janus in order to avoid trouble
  - not too unpleasant on mobile, for both publisher and subscriber
+ - stop infinitely reloading the page (maybe use ajax instead)
 
 Nice to have:
  - better feedback/recovery about errors:
