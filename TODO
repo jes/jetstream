@@ -20,3 +20,4 @@ Nice to have:
  - let both publishers and subscribers record the stream to a file
  - shorter room ids, and alphanumeric (what if we just base58 encode the binary of the current id? would be about 1/2 as long, so not much better)
  - let subscribers view full-screen
+ - let publisher change audio/video source after stream has already started
