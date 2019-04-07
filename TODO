@@ -4,7 +4,6 @@ Required for "launch":
     - tell the subscriber when the publisher has left
  - installation instructions
  - can "lag" stack up over time or does it self-correct?
- - let subscribers mute the audio, and maybe change volume if convenient
  - see if we need to set any of the password settings in Janus in order to avoid trouble
  - not too unpleasant on mobile, for both publisher and subscriber
  - stop infinitely reloading the page (maybe use ajax instead)
