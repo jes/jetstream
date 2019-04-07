@@ -56,6 +56,23 @@ server {
 }
 ```
 
+## Help wanted
+
+There are a number of things that could stand to be improved:
+
+ * we'd want a way to find out how many viewers the stream has, and show this to both the publisher and the subscribers (may require a custom Janus plugin)
+ * when the publisher goes away and comes back (e.g. reloaded the browser), it would be handy if they were still publishing to the same room id
+ * when the publisher goes away and doesn't come back, it would be handy if the subscriber didn't refresh the page every few seconds forever
+ * what happens if the stream is really-high resolution? do we need to explicitly scale it down?
+ * better user experience on mobile, for both publishers and subscribers
+ * switch audio/video source mid-stream
+ * more detailed installation instructions (particularly regarding install and setup of Janus)
+ * make sure that malicious users can't publish to somebody else's room id
+ * let the publisher temporarily disable audio or video mid-stream
+ * shorter room ids (maybe short alpha-numeric strings like YouTube videos, maybe base58 of room id number would work?)
+ * let the subscribers view in full-screen
+ * let the subscribers know when the publisher has disappeared, instead of just freezing
+
 ## Contact
 
 Jetstream is a project by [James Stanley](https://incoherency.co.uk/). You can email me at [james@incoherency.co.uk](mailto:james@incoherency.co.uk) or contact me on [Ricochet](https://ricochet.im/) at ricochet:it2j3z6t6ksumpzd.
