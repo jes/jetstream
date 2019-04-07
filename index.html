@@ -6,15 +6,46 @@
 </head>
 <body style="background: url(img/prism.png)">
 <div class="container">
-<a href=""><img style="padding-top:20px;padding-bottom:20px;padding-right:20px" src="img/jetstream.png" alt="jetstream"></a> <i>Live-streaming without the bullshit. No signup, no accounts, no pricing.</i>
+<a href=""><img style="padding-top:20px;padding-bottom:20px;padding-right:20px" src="img/jetstream.png" alt="jetstream"></a> <i>Live-streaming without the bullshit: no signup, no accounts, no pricing.</i> <a style="margin-left:40px" href="javascript:;" data-toggle="modal" data-target="#about-modal">About</a>
+
+
+<!-- Modal -->
+<div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About jetstream</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Jetstream is live-streaming for the people. It doesn't sign you up, gather your data, ask for money, or drive engagement metrics. It <i>just works</i>, direct from the browser, with no setup required.</p>
+
+        <p>The video and audio is streamed using <a href="https://webrtc.org/">WebRTC</a> to a <a href="https://janus.conf.meetecho.com/">Janus</a> server that relays the stream to the viewers.</p>
+
+        <p><small>
+        Jetstream is a project by <a href="https://incoherency.co.uk/">James Stanley</a>.<br>
+        Email me at <a href="mailto:james@incoherency.co.uk">james@incoherency.co.uk</a>.<br>
+        Free software, with code <a href="https://github.com/jes/jetstream">on github</a>, including self-hosting instructions.
+        </small></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="publisher" style="display:none">
 <div id="prestart">
-<button class="btn btn-primary" id="start">Start streaming your webcam now.</button>
+<center>
+<button style="margin-top: 100px; font-size:1.5em" class="btn btn-lg btn-primary" id="start">Start streaming your webcam now&nbsp;&nbsp;&#9654;</button>
+</center>
 </div>
 <div id="poststart" style="display:none">
 <div id="loading">Establishing connection... Please wait a few seconds.</div>
-<div id="show-streamurl" style="display:none">Share this stream URL: <a target="_blank" id="streamurl"></a> <small>(open it in a new tab to test your stream)</small></div><br>
+<div id="show-streamurl" style="display:none">Share this stream URL: <a target="_blank" id="streamurl"></a> <small>(open in a new tab to test the stream)</small></div><br>
 <span id="slowlink" style="opacity:0;color:red;font-family:monospace">SLOW LINK</span><br>
 <div id="player" style="display:none">
 <video id="myvideo" autoplay playsinline muted="muted"></video><br>
@@ -38,15 +69,10 @@ You could try lowering the bitrate limit.</span>
 <video id="remotestream" autoplay playsinline></video>
 </div>
 
-<hr>
-<small>
-jetstream is a project by <a href="https://incoherency.co.uk/">James Stanley</a>.<br>
-Email me at <a href="mailto:james@incoherency.co.uk">james@incoherency.co.uk</a>.<br>
-Get the code <a href="https://github.com/jes/jetstream">on github</a>.<br>
-</small>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/adapter.min.js"></script>
 <script type="text/javascript" src="js/janus.js"></script>
 <script type="text/javascript" src="js/jetstream.js"></script>
