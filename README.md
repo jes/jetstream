@@ -23,6 +23,8 @@ The HTML part is a static site, so you just need to expose this directory over H
 
 Install [Janus](https://github.com/meetecho/janus-gateway). Make sure you allow connections to it in your firewall.
 
+Jetstream abuses the `videoroom` plugin in Janus. Perhaps one day it'll use a custom plugin, but it's not obvious that that would be better.
+
 ### TLS
 
 Some clients refuse to stream the webcam over an unencrypted link, so you'll want to use [Let's Encrypt](https://letsencrypt.org/) to get a certificate. Make sure you configure Janus to use the certificate as well.
