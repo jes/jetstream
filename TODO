@@ -1,7 +1,6 @@
 Required for "launch":
  - better feedback/recovery about errors:
     - tell the subscriber when the publisher has left
- - installation instructions
  - see if we need to set any of the password settings in Janus in order to avoid trouble
  - not too unpleasant on mobile, for both publisher and subscriber
  - stop infinitely reloading the page (maybe use ajax instead)
@@ -19,3 +18,4 @@ Nice to have:
  - shorter room ids, and alphanumeric (what if we just base58 encode the binary of the current id? would be about 1/2 as long, so not much better)
  - let subscribers view full-screen
  - let publisher change audio/video source after stream has already started
+ - more detailed installation instructions
