@@ -17,10 +17,11 @@ Clone this git repo on to your server:
 
     $ git clone https://github.com/jes/jetstream
 
+The HTML part is a static site, so you just need to expose this directory over HTTP.
+
 ### Janus
 
-Install [Janus](https://github.com/meetecho/janus-gateway).
-
+Install [Janus](https://github.com/meetecho/janus-gateway). Make sure you allow connections to it in your firewall.
 
 ### TLS
 
