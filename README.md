@@ -6,10 +6,9 @@ The video and audio is streamed using WebRTC to a Janus server that relays the s
 
 ## Usage
 
-You can use the public jetstream instance at [jetstream.club](https://jetstream.club).
+You can use the public jetstream instance at [jetstream.club](https://jetstream.club), or self-host it on your own server.
 
 Usage should be self-explanatory: click the button and send the stream URL to your friends.
-
 
 ## Installation
 
