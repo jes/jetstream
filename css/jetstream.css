@@ -1,0 +1,28 @@
+body {
+    background: url('../img/jet-plane-tail-and-sky.jpg') no-repeat center bottom fixed; 
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+.nav-element {
+    display: inline-block;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.btn--about {
+    float: right;
+    background: black;
+    color: white;
+}
+.btn--about:hover {
+    color: teal;
+}
+.splash-msg {
+    text-align: center;
+}
+.splash-msg h1 {
+    margin-top: 15vh;
+}
