@@ -48,12 +48,17 @@
     <div class="splash-msg">
     <h1>Live-streaming without the bullshit:<br />
     <i>no signup, no accounts, no pricing.</i></h1>
-    <button style="margin-top: 100px; font-size:1.5em" class="btn btn-lg btn-primary" id="start">Start streaming your webcam now&nbsp;&nbsp;&#9654;</button>
+    <button class="shiny-btn shiny-btn--main" id="start">Start streaming your webcam now&nbsp;&nbsp;&#9654;<i></i></button>
     </div>
 </div>
 
 <div id="poststart" style="display:none">
-<div id="loading">Establishing connection... Please wait a few seconds.</div>
+<div id="loading">
+    <div class="splash-msg">
+    <h1>Getting ready for lift-off...<br /><i>Please wait a few seconds whilst we establish a connection.</i></h1>
+    </div>
+</div>
+
 <div id="show-streamurl" style="display:none">Share this stream URL: <a target="_blank" id="streamurl"></a> <small>(open in a new tab to test the stream)</small></div><br>
 <span id="slowlink" style="opacity:0;color:red;font-family:monospace">SLOW LINK</span><br>
 <div id="player" style="display:none">
